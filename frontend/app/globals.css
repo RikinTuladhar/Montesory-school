@@ -19,3 +19,23 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+.custom-shape-divider-top-1731125937 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1731125937 svg {
+  position: relative;
+  display: block;
+  width: calc(180% + 1.3px);
+  height: 150px;
+}
+
+.custom-shape-divider-top-1731125937 .shape-fill {
+  fill: #FFFFFF;
+}
