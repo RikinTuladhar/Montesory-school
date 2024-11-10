@@ -61,7 +61,7 @@ export default function Home() {
       {/* second section  */}
       <section className="w-full  text-black pt-56 bg-white relative min-h-[120vh]">
         {/* sub first  */}
-        <div className="w-full py-10 text-black px-72">
+        <div className="w-full py-5 text-black px-72">
           <div className="py-1">
             <h5 className="text-xl font-bold text-primary">
               The Foundation of future
@@ -96,7 +96,7 @@ export default function Home() {
             />
           </div>
 
-          <div className="w-[50%] place-items-center space-y-5 py-10  grid">
+          <div className="w-[50%] place-items-center gap-x-5 gap-y-5  py-10  grid">
             <div className="pr-20 space-y-4">
               <h2 className="text-3xl">Primary years Curriculum</h2>
               <p>
@@ -104,16 +104,15 @@ export default function Home() {
                 freelancers
               </p>
             </div>
-            <div className="grid w-full grid-cols-2 px-24 py-5 ">
+            <div className="grid w-full grid-cols-2 px-5 py-5 ">
               <div className="flex px-5 py-2 space-x-5">
-                <div className="flex items-center justify-center font-bold bg-gray-300 rounded-full text-primary size-14">
+                <div className="flex items-center justify-center font-bold bg-gray-300 rounded-full text-primary size-12">
                   01
                 </div>
-
                 <div>
                   <h5 className="font-bold">Language</h5>
                   <div>
-                    <ol className="pl-5 list-decimal">
+                    <ol className="pl-5 text-sm text-gray-500 list-decimal">
                       <li>Oral Preparation</li>
                       <li>Early Lanuage Activies</li>
                       <li>Writing</li>
@@ -126,14 +125,14 @@ export default function Home() {
               </div>
 
               <div className="flex px-5 py-2 space-x-5">
-                <div className="flex items-center justify-center font-bold bg-gray-300 rounded-full text-primary size-14">
-                  01
+                <div className="flex items-center justify-center font-bold bg-gray-300 rounded-full text-primary size-12">
+                  02
                 </div>
 
                 <div>
                   <h5 className="font-bold">Language</h5>
                   <div>
-                    <ol className="pl-5 list-decimal">
+                    <ol className="pl-5 text-sm text-gray-500 list-decimal">
                       <li>Oral Preparation</li>
                       <li>Early Lanuage Activies</li>
                       <li>Writing</li>
@@ -145,14 +144,14 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex px-5 py-2 space-x-5">
-                <div className="flex items-center justify-center font-bold bg-gray-300 rounded-full text-primary size-14">
-                  01
+                <div className="flex items-center justify-center font-bold bg-gray-300 rounded-full text-primary size-12">
+                  03
                 </div>
 
                 <div>
                   <h5 className="font-bold">Language</h5>
                   <div>
-                    <ol className="pl-5 list-decimal">
+                    <ol className="pl-5 text-sm text-gray-500 list-decimal">
                       <li>Oral Preparation</li>
                       <li>Early Lanuage Activies</li>
                       <li>Writing</li>
@@ -164,14 +163,14 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex px-5 py-2 space-x-5">
-                <div className="flex items-center justify-center font-bold bg-gray-300 rounded-full text-primary size-14">
-                  01
+                <div className="flex items-center justify-center font-bold bg-gray-300 rounded-full text-primary size-12">
+                  04
                 </div>
 
                 <div>
                   <h5 className="font-bold">Language</h5>
                   <div>
-                    <ol className="pl-5 list-decimal">
+                    <ol className="pl-5 text-sm text-gray-500 list-decimal">
                       <li>Oral Preparation</li>
                       <li>Early Lanuage Activies</li>
                       <li>Writing</li>
@@ -183,14 +182,14 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex px-5 py-2 space-x-5">
-                <div className="flex items-center justify-center font-bold bg-gray-300 rounded-full text-primary size-14">
-                  01
+                <div className="flex items-center justify-center font-bold bg-gray-300 rounded-full text-primary size-12">
+                  05
                 </div>
 
                 <div>
                   <h5 className="font-bold">Language</h5>
                   <div>
-                    <ol className="pl-5 list-decimal">
+                    <ol className="pl-5 text-sm text-gray-500 list-decimal">
                       <li>Oral Preparation</li>
                       <li>Early Lanuage Activies</li>
                       <li>Writing</li>
@@ -203,6 +202,117 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      {/* third section  */}
+      <section className="w-full text-black space-y-2 px-16  pb-20  relative  min-h-[90vh]">
+        <div className="">
+          <h5 className="font-bold text-primary">Our Kits</h5>
+        </div>
+        <div>
+          <h1 className="text-4xl font-bold">Out Montessori Home Kits</h1>
+        </div>
+        <div>
+          <p className="text-gray-500">
+            Materials do to the mind what Sports does to the body
+          </p>
+        </div>
+        <div className="w-full h-[70vh] flex justify-between items-center">
+          {Array.from({ length: 4 }).map((_, i) =>
+            i % 2 == 0 ? (
+              <div
+                className="flex flex-col py-5 pl-10 pr-5 space-y-3 bg-white w-60 min-h-80"
+                style={{
+                  boxShadow:
+                    "rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px",
+                }}
+              >
+                <div className="">
+                  <img
+                    src="/images/France.png"
+                    className="size-24"
+                    alt="Logo"
+                  />
+                </div>
+                <div>
+                  <h3 className="font-bold">Pink Tower</h3>
+                </div>
+                <div className="bg-primary w-[30%] h-[3px]"></div>
+                <div>
+                  <p className="font-bold text-gray-400 ">
+                    Scientific - Every material is desigend with years of
+                    scientific observations by Dr Maria Montesorri
+                  </p>
+                </div>
+              </div>
+            ) : (
+              <div
+                className="flex flex-col py-5 pl-10 pr-5 mt-20 space-y-3 bg-white-300 w-60 min-h-80"
+                style={{
+                  boxShadow:
+                    "rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px",
+                }}
+              >
+                <div className="">
+                  <img
+                    src="/images/France.png"
+                    className="size-24"
+                    alt="Logo"
+                  />
+                </div>
+                <div>
+                  <h3 className="font-bold">Pink Tower</h3>
+                </div>
+                <div className="bg-primary w-[30%] h-[3px]"></div>
+                <div>
+                  <p className="font-bold text-gray-400 ">
+                    Scientific - Every material is desigend with years of
+                    scientific observations by Dr Maria Montesorri
+                  </p>
+                </div>
+              </div>
+            )
+          )}
+        </div>
+      </section>
+      {/* forth sections */}
+      <section className="w-full text-black space-y-2 px-16  pb-20  relative  min-h-[90vh]">
+        <div className="w-full">
+          <h5 className="font-bold text-primary">Testimonials</h5>
+        </div>
+        <div>
+          <h1 className="text-5xl font-bold">What our parents say about us</h1>
+        </div>
+        <div className="w-full flex justify-between pt-10 min-h-[20vh]">
+          {/* card */}
+          {Array.from({ length: 4 }).map((_, i) => (
+            <div className="  w-[15rem] flex justify-center flex-col items-center min-h-[30rem]  ">
+              <div className="h-[50%] min-h-[15rem] w-full ">
+                <img
+                  src="/images/Student-learning-4.jpg"
+                  className="w-full h-full"
+                  alt="images"
+                />
+              </div>
+              <div className="flex h-[50%] px-5 space-y-3 py-2 flex-col items-center justify-center">
+                <div className="flex px-2 py-1 text-white rounded-3xl bg-blue-950 ">
+                  <span>Star</span> <span>4.9</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold">Video in live Action</h3>
+                </div>
+                <div className="text-justify">
+                  <p className="text-sm text-gray-600 ">
+                    The best edution we could home for sitting here in a remote
+                    factor settlement - Mrigya, Mother of Tia
+                  </p>
+                </div>
+                <button className="w-full px-5 py-2 font-bold border text-primary border-primary rounded-3xl">
+                  Watch Video
+                </button>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
     </>
