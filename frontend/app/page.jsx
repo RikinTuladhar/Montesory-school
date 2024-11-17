@@ -160,7 +160,7 @@ export default function Page() {
       <>
         {/* top section  */}
         <Container className={`mt-12 md:mt-16 my-12 md:flex`}>
-          <div className="space-y-4 md:space-y-20 md:w-[50%] ">
+          <div className="space-y-4 md:space-y-20 md:w-[60%] ">
             <div className="space-y-4 md:space-y-8">
               <div>
                 <h2 className="text-heading3 md:text-heading2 ">
@@ -181,7 +181,7 @@ export default function Page() {
             </div>
           </div>
           {!mobileView && (
-            <div className=" w-full space-y-4 md:w-[50%]">
+            <div className=" w-full space-y-4 md:w-[40%]">
               <div className="w-full h-24 rounded-xl ">
                 <img
                   src="/images/study.png"
