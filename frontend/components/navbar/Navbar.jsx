@@ -13,7 +13,6 @@ const Navbar = () => {
   const mobileView = useSelector((s) => s?.mobileView.mobileView);
   const [showMenu, setShowMenu] = useState(false);
 
-  
   useEffect(() => {
     if (typeof window !== "undefined") {
       dispatch(handleMobileView(window.innerWidth <= 500));
@@ -37,10 +36,10 @@ const Navbar = () => {
         ) : (
           <>
             <div className="flex flex-wrap gap-x-10">
-              <div>Home</div>
-              <div>About Us</div>
-              <div>Contact</div>
-              <div>About</div>
+              <div className="cursor-pointer">Home</div>
+              <div  className="cursor-pointer">About Us</div>
+              <div className="cursor-pointer"> Contact</div>
+              <div className="cursor-pointer">About</div>
             </div>
             <div>
               <Button className="bg-alternate" title={"Enquire Now"} />
