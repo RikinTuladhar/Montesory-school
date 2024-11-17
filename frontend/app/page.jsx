@@ -5,6 +5,7 @@ import Button from "@/components/buttons/Button";
 import { useDispatch, useSelector } from "react-redux";
 import { handleMobileView } from "@/redux/mobileView";
 import { useEffect, useState } from "react";
+import Footer from "@/layout/Footer"
 export default function Page() {
   const dispatch = useDispatch();
   const [windowWidth, setWindowWidth] = useState(
@@ -40,12 +41,11 @@ export default function Page() {
       {/* lower section  */}
       {mobileView ? mobileTopCoutingFooter() : deskTopCoutingFooter()}
       {secondSection()}
-
       {thirdSection()}
+      {fourthSection()}
+      <Footer/>
     </div>
   );
-
-
 
   function heroSection() {
     return (
@@ -89,7 +89,7 @@ export default function Page() {
   }
   function deskTopCoutingFooter() {
     return (
-      <div className="w-full mt-12  text-whit flex-wrap flex justify-center gap-14 items-center bg-primary  py-12">
+      <div className="w-full mt-12  text-white flex-wrap flex justify-center gap-14 items-center bg-primary  py-12">
         <div className="flex flex-col">
           <div className="text-heading3">8k</div>
           <div>Success Stories</div>
@@ -208,7 +208,7 @@ export default function Page() {
         </Container>
         {/* lower section  */}
         <Container
-          className={`my-4 space-y-12 md:space-y-0 justify-between items-center md:flex`}
+          className={` my-4 md:my-24 space-y-12 md:space-y-0 justify-between items-center md:flex`}
         >
           {Array.from({ length: 3 }).map((_, i) => (
             <div
@@ -233,73 +233,112 @@ export default function Page() {
     );
   }
   function thirdSection() {
-    return <>
-      {/* top section  */}
-      <Container className={`mt-8 md:mt-16 md:flex md:gap-4 `}>
-        <div className="w-full md:w-[50%] justify-center items-center space-y-4">
-          <h2 className="text-heading2">How we help millions of parents</h2>
-          <p className="text-paragraph">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab quia
-            obcaecati alias est maiores, minima placeat quam repudiandae,
-            repellendus culpa illo, eveniet necessitatibus. Excepturi, delectus.
-            Deserunt corrupti quos harum ipsam culpa commodi libero impedit
-            praesentium minima, ab repellendus sit quidem nobis officia ad?
-            Molestias, dolorum!
-          </p>
-        </div>
-        <div className="w-full md:w-[50%] gap-y-4 flex md:grid grid-cols-2 gap-8 flex-col  my-10">
-          {Array.from({ length: 6 }).map((_, i) => i % 2 == 0 ? (
-            <div
-              key={i}
-              className=" pl-8  py-4 flex gap-3 text-white justify-start items-center rounded-3xl bg-primary"
-            >
-              <div className="size-8   bg-black">
-                <img src="/images/study.png" alt="icon" />
-              </div>
-              <div>Parenting Tips</div>
-            </div>
-          ) : (
-            <div
-              key={i}
-              className=" pl-8 py-4 flex gap-3 justify-start items-center rounded-3xl bg-alternate"
-            >
-              <div className="size-8   bg-black">
-                <img src="/images/study.png" alt="icon" />
-              </div>
-              <div>Parenting Tips</div>
-            </div>
-          )
-          )}
-        </div>
-      </Container>
-      {/* lower section  */}
-      <Container
-        className={`mt-8   flex-wrap md:flex-nowrap flex gap-8 justify-center items-center md:mt-16 md:flex md:gap-4 `}
-      >
-        <div className="w-full space-y-4 md:ml-24">
-          <h2 className="text-heading2 ">
-            We help you find the best schools for your child
-          </h2>
-          <p className="text-paragraph text-justify">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-            beatae eveniet consectetur eum corrupti pariatur, nesciunt rerum
-            quibusdam! Ut repellat eveniet rem neque?
-          </p>
-        </div>
-        <div className="w-full grid place-items-center md:w-[20%]">
-          <Button className={`bg-primary  text-white`} title={"Browse Schools"} />
-        </div>
-      </Container>
+    return (
+      <>
+        {/* top section  */}
+        <Container className={`mt-8 md:mt-16 md:flex md:gap-4 `}>
+          <div className="w-full md:w-[50%] justify-center items-center space-y-4">
+            <h2 className="text-heading2">How we help millions of parents</h2>
+            <p className="text-paragraph">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab quia
+              obcaecati alias est maiores, minima placeat quam repudiandae,
+              repellendus culpa illo, eveniet necessitatibus. Excepturi,
+              delectus. Deserunt corrupti quos harum ipsam culpa commodi libero
+              impedit praesentium minima, ab repellendus sit quidem nobis
+              officia ad? Molestias, dolorum!
+            </p>
+          </div>
+          <div className="w-full md:w-[50%] gap-y-4 flex md:grid grid-cols-2 gap-8 flex-col  my-10">
+            {Array.from({ length: 6 }).map((_, i) =>
+              i % 2 == 0 ? (
+                <div
+                  key={i}
+                  className=" pl-8  py-4 flex gap-3 text-white justify-start items-center rounded-3xl bg-primary"
+                >
+                  <div className="size-8   bg-black">
+                    <img src="/images/study.png" alt="icon" />
+                  </div>
+                  <div>Parenting Tips</div>
+                </div>
+              ) : (
+                <div
+                  key={i}
+                  className=" pl-8 py-4 flex gap-3 justify-start items-center rounded-3xl bg-alternate"
+                >
+                  <div className="size-8   bg-black">
+                    <img src="/images/study.png" alt="icon" />
+                  </div>
+                  <div>Parenting Tips</div>
+                </div>
+              )
+            )}
+          </div>
+        </Container>
+        {/* lower section  */}
+        <Container
+          className={`mt-8   flex-wrap md:flex-nowrap flex gap-8 justify-center items-center md:mt-16 md:flex md:gap-4 `}
+        >
+          <div className="w-full space-y-4 md:ml-24">
+            <h2 className="text-heading2 ">
+              We help you find the best schools for your child
+            </h2>
+            <p className="text-paragraph text-justify">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Accusantium beatae eveniet consectetur eum corrupti pariatur,
+              nesciunt rerum quibusdam! Ut repellat eveniet rem neque?
+            </p>
+          </div>
+          <div className="w-full grid place-items-center md:w-[20%]">
+            <Button
+              className={`bg-primary  text-white`}
+              title={"Browse Schools"}
+            />
+          </div>
+        </Container>
 
-      <Container className={`my-16`}>
-        <div className="w-full grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-16">
-          {Array.from({ length: 8 }).map((_, i) => (
-            <div key={i} className="rounded-3xl bg-alternate px-4 py-4">
-              <p className="text-center">20+ Countries</p>
+        <Container className={`my-16 md:my-24`}>
+          <div className="w-full grid  grid-cols-1 md:grid-cols-4 gap-4 md:gap-16">
+            {Array.from({ length: 8 }).map((_, i) => (
+              <div key={i} className="rounded-3xl bg-alternate px-4 py-4">
+                <p className="text-center">20+ Countries</p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </>
+    );
+  }
+  function fourthSection() {
+    return (
+      <Container className={`mt-8 md:mt-16 md:min-h-[80vh]`}>
+        <div>
+          <h1 className="font-bold md:font-normal text-heading3 md:text-heading1">
+            Facilities Provided
+          </h1>
+        </div>
+        <div className="w-full grid grid-cols-1 px-4 md:grid-cols-3 gap-y-12 md:gap-y-0 justify-items-center items-center py-8 md:py-2 min-h-[100vh]">
+          {Array.from({ length: 6 }).map((_, i) => (
+            <div
+              key={i}
+              className=" w-[18rem] md:w-[20.125rem] space-y-2 h-[12rem] md:h-[14.5rem] rounded-xl bg-cards"
+              style={{ boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}
+            >
+              <div className="h-[80%]">
+                <img
+                  src="/images/sports.jpeg"
+                  className="w-full  rounded-t-xl h-full"
+                  alt="image of sports"
+                />
+              </div>
+              <div>
+                <h5 className="text-bigParagraph text-center font-semibold">
+                  Sports
+                </h5>
+              </div>
             </div>
           ))}
         </div>
       </Container>
-    </>;
+    );
   }
 }
