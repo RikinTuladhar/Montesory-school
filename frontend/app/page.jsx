@@ -43,84 +43,6 @@ export default function Page() {
     </div>
   );
 
-  function secondSection() {
-    return (
-      <>
-        {/* top section  */}
-        <Container className={`mt-16 my-16 md:flex`}>
-          <div className="space-y-20 md:w-[50%] ">
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-heading3 md:text-heading2 ">
-                  Why we are best from others?
-                </h2>
-              </div>
-              <div>
-                <p className="text-bigParagraph">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                  culpa animi eos itaque sunt dolorum saepe magni, accusantium
-                  delectus fugit adipisci odit, qui hic enim nisi dolor labore
-                  explicabo voluptas?
-                </p>
-              </div>
-            </div>
-            <div>
-              <Button className={`bg-alternate`} title={"Watch Out"} />
-            </div>
-          </div>
-          {!mobileView && (
-            <div className=" w-full space-y-4 md:w-[50%]">
-              <div className="w-full h-24 rounded-xl ">
-                <img
-                  src="/images/study.png"
-                  className="w-full h-full"
-                  alt="image of study"
-                />
-              </div>
-              <div className="w-full h-24 rounded-xl  ">
-                <img
-                  src="/images/target.png"
-                  className="w-full h-full"
-                  alt="image of target"
-                />
-              </div>
-              <div className="w-full h-24 rounded-xl ">
-                <img
-                  src="/images/teach.png"
-                  className="w-full h-full"
-                  alt="image of teach"
-                />
-              </div>
-            </div>
-          )}
-        </Container>
-        {/* lower section  */}
-        <Container
-          className={`my-4 space-y-12 justify-between items-center md:flex`}
-        >
-          {Array.from({ length: 3 }).map((_, i) => (
-            <div
-              key={i}
-              style={{ boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}
-              className="md:w-[20rem] space-y-2 rounded-lg  bg-cards px-2 py-2"
-            >
-              <div className="w-full  h-[85%]">
-                <img
-                  src="/images/readingGirl.png"
-                  className="w-full h-full"
-                  alt="Image"
-                />
-              </div>
-              <div>
-                <h3 className="text-heading4">Learn More To Get Good </h3>
-              </div>
-            </div>
-          ))}
-        </Container>
-      </>
-    );
-  }
-
   function heroSection() {
     return (
       <Container className={`mt-8 md:mt-16 min-h-[80vh]`}>
@@ -228,6 +150,84 @@ export default function Page() {
           </div>
         </div>
       </div>
+    );
+  }
+
+  function secondSection() {
+    return (
+      <>
+        {/* top section  */}
+        <Container className={`mt-16 my-12 md:flex`}>
+          <div className="space-y-20 md:w-[50%] ">
+            <div className="space-y-8">
+              <div>
+                <h2 className="text-heading3 md:text-heading2 ">
+                  Why we are best from others?
+                </h2>
+              </div>
+              <div>
+                <p className="text-bigParagraph">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                  culpa animi eos itaque sunt dolorum saepe magni, accusantium
+                  delectus fugit adipisci odit, qui hic enim nisi dolor labore
+                  explicabo voluptas?
+                </p>
+              </div>
+            </div>
+            <div>
+              <Button className={`bg-alternate`} title={"Watch Out"} />
+            </div>
+          </div>
+          {!mobileView && (
+            <div className=" w-full space-y-4 md:w-[50%]">
+              <div className="w-full h-24 rounded-xl ">
+                <img
+                  src="/images/study.png"
+                  className="w-full h-full"
+                  alt="image of study"
+                />
+              </div>
+              <div className="w-full h-24 rounded-xl  ">
+                <img
+                  src="/images/target.png"
+                  className="w-full h-full"
+                  alt="image of target"
+                />
+              </div>
+              <div className="w-full h-24 rounded-xl ">
+                <img
+                  src="/images/teach.png"
+                  className="w-full h-full"
+                  alt="image of teach"
+                />
+              </div>
+            </div>
+          )}
+        </Container>
+        {/* lower section  */}
+        <Container
+          className={`my-4 space-y-12 justify-between items-center md:flex`}
+        >
+          {Array.from({ length: 3 }).map((_, i) => (
+            <div
+              key={i}
+              style={{ boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}
+              className="md:w-[20rem] space-y-2 rounded-lg  bg-cards px-2 py-2"
+            >
+              <div className="w-full  h-[85%]">
+                <img
+                  src="/images/readingGirl.png"
+                  className="w-full h-full"
+                  alt="Image"
+                />
+              </div>
+              <div>
+                <h3 className="text-heading4">Learn More To Get Good </h3>
+              </div>
+            </div>
+          ))}
+        </Container>
+      </>
     );
   }
 }
