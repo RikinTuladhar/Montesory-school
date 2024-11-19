@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <>
     <Container
-       className={`mt-8 md:mt-8 gap-x-8 grid grid-cols-2  md:grid-cols-4 py-4 bg-[#1f2937] md:min-h-[30vh]`}
+       className={`mt-8 md:mt-8 gap-x-8 grid grid-cols-2  bg-black md:grid-cols-4 py-4  md:min-h-[30vh]`}
      >
        {Array.from({ length: 4 }).map((_, i) => (
          <div
@@ -25,7 +25,7 @@ const Footer = () => {
      </Container>
      <div className="w-full h-[2px] bg-white"></div>
      <Container
-       className={`text-white gap-y-4 flex-col md:flex-row py-4 text-smallParagraph pt-5 flex justify-between w-full  bg-[#1f2937] md:min-h-[10vh]`}
+       className={`text-white gap-y-4 flex-col md:flex-row py-4 text-smallParagraph pt-5 flex justify-between w-full  bg-black md:min-h-[10vh]`}
      >
        <div>&copy;TechyLads. All rights reserved</div>
        <div>Terms . Privacy Policy</div>
